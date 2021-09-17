@@ -1,0 +1,55 @@
+.container-name{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    h1{
+        padding-top: 80px;
+        color: #fff;
+        font-size: 65px;
+        z-index: 3;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        span{
+            color: rgb(255, 20, 71);
+        }
+    }
+    p{
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Itim', cursive;
+        span{
+            color: rgb(255, 20, 71);
+        }
+    }
+
+    .right-side{
+        padding-top: 250px;
+        ul{
+            li{
+                padding-top: 15px;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    .language{
+        position: absolute;
+        bottom: 30px;
+        button{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: #fff;
+            display: block;
+            transform: rotate(90deg);
+            padding-top: 40px;
+        }
+    }
+}

@@ -1,0 +1,295 @@
+@mixin span {
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    line-height: 1.95;
+    color: rgb(206, 206, 206);
+    top: -30px;
+}
+
+@mixin skill {
+    display: block;
+    height: 100%;
+    background-color: #009e66;
+    position: relative;
+}
+
+.home{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    opacity: 0.5;
+    z-index: 1;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.resume-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__title{
+        margin-top: 84px;
+        font-size: 15px;
+        margin-bottom: 17px;
+        color: rgb(159, 159, 159);
+        font-family: Poppins, sans-serif;
+        font-weight: 400;
+        line-height: 1.95;
+    }
+    &__name{
+        font-size: 46px;
+        margin-bottom: 37px;
+        font-weight: 700;
+        letter-spacing: -0.25px;
+        line-height: 100%;
+        color: rgb(240, 240, 240);
+        font-family: Poppins, sans-serif;
+    }
+}
+
+.education{
+    margin-top: 83px;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: rgb(240, 240, 240);
+    font-weight: 500;
+    line-height: 1.2;
+    font-family: Poppins, sans-serif;
+
+}
+
+.resume-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    .left-side{
+        width: 47%;
+        background-color: #222;
+        .my-picture{
+            width: 100%;
+            height: 100%;
+            border:1px solid #009e66;
+            .pro-image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .right-side{
+        width: 48%;
+        .education-block{
+            border-left: 2px solid #009e66;
+            &__item{
+                border-bottom: 1px solid rgb(49, 49, 49);
+                background-color: rgb(22, 22, 22);
+                position: relative;
+                padding: 32px 48px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 24px;
+                    height: 16px;
+                    left: 0;
+                    background-color: #009e66;
+                }
+                &--name{
+                    line-height: 100%;
+                    margin-bottom: 9px;
+                    color: rgb(240, 240, 240);
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    font-family: 'Poppins';
+                }
+                &--year{
+                    color: rgb(159, 159, 159);
+                    font-family: Poppins, sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.95;
+                    margin-bottom: 7px;
+                }
+                &--title{
+                    color: rgb(159, 159, 159);
+                    font-family: Poppins, sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.95;
+                }
+            }
+        }
+    }
+}
+
+.skill-degre{
+    &_title{
+        color: rgb(159, 159, 159);
+        font-family: Poppins, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.95;
+        margin-bottom: 17px;
+    }
+    &_name{
+        display: inline-block;
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: -0.25px;
+        line-height: 100%;
+        margin-bottom: 0px;
+        color: rgb(240, 240, 240);
+        font-family: 'Poppins';
+        margin-bottom: 50px;
+    }
+    .skills-wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .skill-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_one{
+            width: 48%;
+            height: 9px;
+            background-color:rgb(47, 47, 47);
+            margin-bottom: 60px;
+            border-radius: 2px;
+            &__html{
+                width: 95%;
+                @include skill;
+                &::before{
+                    content: 'HTML';
+                    left: 0;
+                    @include span;
+                }
+
+                &::after{
+                    content: '95%';
+                    right: 0;
+                    @include span;
+                }
+            }
+            &__css{
+                width: 85%;
+                @include skill;
+                &::before{
+                    content: 'CSS';
+                    left: 0;
+                    @include span;
+                }
+                &::after{
+                    content: '85%';
+                    right: 0;
+                    @include span
+                }
+            }
+            &__sass{
+                width: 80%;
+                @include skill;
+                &::before{
+                    content: 'SASS';
+                    left: 0;
+                    @include span;
+                }
+                &::after{
+                    content: '80%';
+                    right: 0;
+                    @include span
+                }
+            }
+            &__javascript{
+                width: 70%;
+                @include skill;
+                &::before{
+                    content: 'JavaScript';
+                    left: 0;
+                    @include span;
+                }
+                &::after{
+                    content: '70%';
+                    right: 0;
+                    @include span
+                }
+            }
+            &__bootstrapt{
+                width: 60%;
+                @include skill;
+                &::before{
+                    content: 'Bootstrapt';
+                    left: 0;
+                    @include span;
+                }
+                &::after{
+                    content: '60%';
+                    right: 0;
+                    @include span
+                }
+            }
+            &__react{
+                width: 55%;
+                @include skill;
+                &::before{
+                    content: 'React';
+                    left: 0;
+                    @include span;
+                }
+                &::after{
+                    content: '55%';
+                    right: 0;
+                    @include span
+                }
+            }
+        }
+    }
+}
+
+.another-skill{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    &_left{
+        width: 55%;
+        margin-right: 30px;
+        &__name{
+            font-size: 31px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 13px;
+            color: rgb(240, 240, 240);
+            font-family: 'Poppins';
+        }
+        &__overview{
+            font-size: 16px;
+            line-height: 2;
+            color: rgb(159, 159, 159);
+            font-family: Poppins, sans-serif;
+            font-weight: 400;
+        }
+    }
+    &_right{
+        width: 45%;
+        border: 1px solid red;
+        img{
+            color: #fff;
+        }
+    }
+}
